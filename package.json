@@ -1,0 +1,38 @@
+{
+    "name": "flappexpress",
+    "version": "1.0.1",
+    "description": "\"Flapp is a fertiliser and lime recommendations application\"",
+    "main": "main.js",
+    "repository": "https://github.com/ifelsegrandmaster/flappexpress.git",
+    "author": "Patrice Chaula",
+    "license": "MIT",
+    "dependencies": {
+        "csv": "^5.3.1",
+        "docx": "^5.4.1",
+        "immutable": "^4.0.0-rc.12",
+        "jquery": "^3.4.1",
+        "mysql": "^2.17.1",
+        "print-pdf": "^0.2.6"
+    },
+    "devDependencies": {
+        "electron": "^8.0.0",
+        "electron-builder": "^22.5.1",
+        "electron-packager": "^14.2.1",
+        "electron-winstaller": "^4.0.0",
+        "electron-wix-msi": "^2.2.0"
+    },
+    "scripts": {
+        "start": "electron .",
+        "dist": "electron-builder -mwl"
+    },
+    "build": {
+        "appId": "com.abantusoft.flapp",
+        "extraFiles": {
+            "from": "./build",
+            "to": "./dist"
+        },
+        "win": {
+            "target": "nsis"
+        }
+    }
+}
